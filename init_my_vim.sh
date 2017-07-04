@@ -12,7 +12,9 @@ fi
 echo "create new vimrc..."
 ln -s ~/.vim/.vimrc ~/.vimrc
 
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
 git submodule init
 git submodule update
 
-vi +BundleInstall! +qall
+vi +PluginInstall! +qall
